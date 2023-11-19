@@ -37,7 +37,8 @@ I have created seperate endpoints for this. Note base url remains same `http://l
 4. `/searchByTraceId` - Form-data parameter name is `traceId`
 5. `/searchBySpanId ` - Form-data parameter name is `spanId`
 6. `/searchByCommit` - Form-data parameter name is `commit`
-7. `/searchByMetadataParentResourceId` - Form-data parameter name is `parentResourceId`
+7. `/searchByTimestamp` - Form-data parameter name is `from` and `to`
+8. `/searchByMetadataParentResourceId` - Form-data parameter name is `parentResourceId`
 
 Please follow the snap for the last query
 ![image](https://github.com/kalpadiptyaroy/log-ingestor/assets/40118928/4d425347-1795-47b0-98c6-e9ba4508a689)
