@@ -1,5 +1,7 @@
 package com.sde.logingestor.controller;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -60,5 +62,10 @@ public class LogController {
     @GetMapping("/searchByMetadataParentResourceId")
     public ResponseEntity<?> searchByMetadataParentResourceId(@RequestParam("parentResourceId") String parentResourceId) {
         return ResponseEntity.ok(logService.searchByMetadataParentResourceId(parentResourceId));
+    }
+
+    @GetMapping("/searchByTimestamp")
+    public ResponseEntity<?> searchByTimestamp(@RequestParam("from") Date from, @RequestParam("to") Date to) {
+        return ResponseEntity.ok(logService.searchByTimestampWithin(from, to));
     }
 }
